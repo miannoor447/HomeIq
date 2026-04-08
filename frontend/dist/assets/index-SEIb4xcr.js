@@ -1,0 +1,1 @@
+const a="/api";async function r(e,n={}){const t=await fetch(`${a}${e}`,n);if(!t.ok){const o=await t.json().catch(()=>({}));throw new Error(o.detail||`Request failed  ${t.status}`)}return t.json()}function s(e){return r("/analyze",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(e)})}function i(e){return r("/properties")}export{s as a,i as f};
