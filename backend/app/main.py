@@ -20,6 +20,7 @@ def create_app() -> FastAPI:
         title="HomeIQ API",
         version="1.0.0",
         description="Smart home affordability analysis backend.",
+        redirect_slashes=False,
     )
 
     app.add_middleware(

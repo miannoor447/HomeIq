@@ -21,5 +21,5 @@ export function analyzeProfile(payload) {
 
 export function fetchProperties(maxPrice) {
   const query = maxPrice != null ? `?max_price=${maxPrice}` : ''
-  return request(`/properties/${query}`)
+  return request(`/properties${query}`)
 }

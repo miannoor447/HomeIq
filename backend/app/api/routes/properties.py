@@ -8,7 +8,8 @@ from app.db import queries
 router = APIRouter(prefix="/properties", tags=["Properties"])
 
 
-@router.get("/", summary="List properties")
+@router.get("", summary="List properties")
+@router.get("/", summary="List properties", include_in_schema=False)
 def list_properties(max_price: Optional[float] = None):
     """Return all properties, optionally filtered to those at or below max_price."""
     if max_price is not None:
